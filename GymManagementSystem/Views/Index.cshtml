@@ -1,0 +1,38 @@
+﻿@model int
+
+<h2>@Model</h2>
+
+@{
+	string pageTitle = "C++";
+	int age = 22;
+	List<int> list = new List<int>() { 10, 20, 30, 40 };
+}
+<html>
+
+	<head>
+
+		<title>@pageTitle</title>
+	</head>
+	<body>
+
+		<h1>Welcome to my life</h1>
+		<h2>@age</h2>
+		<p> @(age+1)</p>
+
+	@if (age >= 18)
+	{
+		<p>Adult</p>
+	}
+	else
+	{
+		<p>Under Age</p>
+	}
+	<ul>
+		@foreach(int n in list)
+		{
+			<li>@n</li>
+		}
+	</ul>
+</body>
+
+</html>
